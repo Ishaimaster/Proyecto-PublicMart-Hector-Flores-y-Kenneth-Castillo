@@ -1,0 +1,15 @@
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\bin\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.exe
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\bin\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.deps.json
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\bin\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.runtimeconfig.json
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\bin\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.dll
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\bin\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.pdb
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.AssemblyInfo.cs
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.dll
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\refint\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.dll
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.pdb
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.genruntimeconfig.cache
+C:\Users\HP\source\repos\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ref\PROYECTO PRÁCTICO NO.1 HECTOR FLORES Y KENNETH CASTILLO.dll
