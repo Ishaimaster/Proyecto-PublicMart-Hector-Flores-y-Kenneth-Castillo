@@ -1,6 +1,5 @@
-﻿using System.Security.Principal;
-using System.Text.RegularExpressions;
-using System.Transactions;
+﻿using System.Text.RegularExpressions;
+
 
 //inicializacion de las variables del menu principal
 bool continuar = true;
@@ -198,7 +197,7 @@ while (continuar)
 
                                     break;
                                 default:
-                                    //Validación de la correcta escritura del codigo
+                                    //Validación de la entrada
                                     Console.WriteLine("Código del producto inválido");
                                     codigocorrecto = true;
                                     Console.ReadKey();
@@ -238,7 +237,7 @@ while (continuar)
                             }
                             catch (Exception)
                             {
-                                //Valida que se ingrese un numero
+                                //Valida la entrada
                                 Console.WriteLine("Ingrese una cantidad valida");
                                 Console.ReadKey();
                                 Console.Clear();
@@ -250,7 +249,7 @@ while (continuar)
                         ///////////////////////////////////////////////////////////////////////////
 
 
-                        //Pregunta al usuario si desea ingresar otro producto 
+                        //Pregunta al usuario si desea ingresar otro producto y  valida la respuesta
                         while (true)
                         {
                             try
@@ -304,7 +303,7 @@ while (continuar)
                     {
                         try
                         {
-                            Console.WriteLine("Ingrese metodo de pago (Efectivo/Tarjeta) E=efectivo/ T=tarjeta");
+                            Console.WriteLine("Ingrese metodo de pago (Efectivo/Tarjeta) E = efectivo/ T = tarjeta");
                             metodoPago = Convert.ToChar(Console.ReadLine());
                             if (metodoPago == 'T')
                             {
@@ -337,11 +336,10 @@ while (continuar)
 
                     }
                     Console.Clear();
-                    //Genera el numero de factura
 
+                    //Genera el numero de factura
                     Random rnd = new Random();
                     int x = rnd.Next(1, 1000);
-
                     int numfactura = ((2 * x + puntos * puntos) + (2021 * n)) % 10000;
 
 
@@ -403,7 +401,7 @@ while (continuar)
                     Console.WriteLine("Total: Q" + (total.ToString("0.00")));
                     Console.WriteLine("-------------------------------------------------------------------");
                     Console.WriteLine("Una copia de la factura se enviará al correo: " + email);
-
+                    Console.WriteLine("Gracias por su compra, vuelva pronto");
 
                     //Variables acumultavias para el reporte de facturacion
                     totalFacturas++;
