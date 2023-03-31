@@ -103,7 +103,7 @@ while (continuar)
                     }
                     Console.Clear();
 
-                   
+
 
                     //Ingreso y validacion del correo electronico del cliente
                     while (true)
@@ -111,7 +111,7 @@ while (continuar)
                         // Imprimir lo ingresado para mejorar el aspecto de avance del menu
                         Console.WriteLine("Ingrese el No. NIT del cliente (8 digitos) : ");
                         Console.WriteLine(Nonit);
-                       
+
                         Console.WriteLine("Ingrese el email del cliente: ");
                         email = Console.ReadLine();
 
@@ -125,8 +125,8 @@ while (continuar)
                         {
                             Console.WriteLine("Ingrese una direccion de correo valida");
                             Console.ReadKey();
-                           
-                        } 
+
+                        }
                         Console.Clear();
                     }
 
@@ -222,7 +222,7 @@ while (continuar)
                                 Console.WriteLine("Ingrese la cantidad de unidades: ");
                                 cantidad = int.Parse(Console.ReadLine());
 
-                                if (cantidad < 0)
+                                if (cantidad <= 0)
                                 {       //Valida que la cantidad ingresada sea mayor que  0
                                     Console.WriteLine("Cantidad de unidades incorrectas.");
                                     Console.ReadKey();
@@ -245,6 +245,7 @@ while (continuar)
                             Console.Clear();
                         }
 
+                        Console.Clear();
 
                         ///////////////////////////////////////////////////////////////////////////
 
@@ -252,6 +253,10 @@ while (continuar)
                         //Pregunta al usuario si desea ingresar otro producto y  valida la respuesta
                         while (true)
                         {
+                            Console.WriteLine("Ingrese el codígo del producto deseado (001-005): ");
+                            Console.WriteLine(codigo);
+                            Console.WriteLine("Ingrese la cantidad de unidades: ");
+                            Console.WriteLine(cantidad);
                             try
                             {
                                 Console.WriteLine("¿Desea ingresar otro producto?  s=si/ n=no");
@@ -305,7 +310,7 @@ while (continuar)
                         {
                             Console.WriteLine("Ingrese metodo de pago (Efectivo/Tarjeta) E = efectivo/ T = tarjeta");
                             metodoPago = Convert.ToChar(Console.ReadLine());
-                            if (metodoPago == 'T')
+                            if (metodoPago == 'T') //Si el metodo es con tarjeta, se summan puntos en funcion de lo gastado
                             {
                                 FormaPago = "Tarjeta";
 
@@ -320,7 +325,7 @@ while (continuar)
                                     puntos = (int)((subtotal / 15) * 3);
                                 }
                             }
-                            else if (metodoPago == 'E')
+                            else if (metodoPago == 'E') //si el metodo de pago es en efectivo, no se suman puntos
                             {
                                 FormaPago = "Efectivo";
                                 puntos = 0;
@@ -357,7 +362,7 @@ while (continuar)
                     Console.WriteLine("Puntos acumulados: " + puntos);
                     Console.WriteLine("============================= PRODUCTOS ==========================");
 
-                    //Recorre cada elemento de la lista creada y escoge un determinado elemento segun su codigo
+                    //Recorre cada elemento de la lista creada y escoge un determinado elemento segun el nombre asignado
                     foreach (Producto _producto in _productos)
                     {
                         codigo = "";
@@ -385,21 +390,26 @@ while (continuar)
                                 break;
                         }
 
+                        //Imprime cada elemento que se encuentre en la lista, con sus componentes
                         Console.WriteLine("Código " + codigo + "|" + "Producto " + _producto.NombreProducto + "|" + "Precio Q" + _producto.PrecioUnitario + "|" + "Cantidad " + _producto.Cantidad);
 
                     }
                     Console.WriteLine("-------------------------------------------------------------------");
 
 
-                    //Variables para el calculo e impresion del subtotal, impuestos y total de la factura
+                    //Variables para el calculo e impresion del subtotal, impuestos  total de la factura
                     double impuestoISR = subtotal * 0.05;
                     double impuestoIVA = subtotal * 0.12;
                     total = subtotal + impuestoISR + impuestoIVA;
 
                     Console.WriteLine("Subtotal: Q" + (subtotal.ToString("0.00")));
-                    Console.WriteLine("Impuestos: 5% Impuesto de ISR y 12% Impuesto de IVA");
-                    Console.WriteLine("Total: Q" + (total.ToString("0.00")));
                     Console.WriteLine("-------------------------------------------------------------------");
+                    Console.WriteLine("Impuestos:");
+                    Console.WriteLine("ISR:" + "\t" + "Q"+ (impuestoISR.ToString("0.00")));
+                    Console.WriteLine("IVA:" + "\t" + "Q" + (impuestoIVA.ToString("0.00")));
+                    Console.WriteLine("-------------------------------------------------------------------");
+                    Console.WriteLine("Total: Q" + (total.ToString("0.00")));
+                    Console.WriteLine();
                     Console.WriteLine("Una copia de la factura se enviará al correo: " + email);
                     Console.WriteLine("Gracias por su compra, vuelva pronto");
 
@@ -430,28 +440,36 @@ while (continuar)
 
                     while (true)
                     {
+
+                        //Solicita al usuario si desea continuar facturando o volver al menu principal
+                        Console.WriteLine("1. Crear otra factura");
+                        Console.WriteLine("2. Volver al menu principal");
+                        Console.Write("Opción: ");
                         try
                         {
-                            //Solicita al usuario si desea continuar facturando o volver al menu principal
-                            Console.WriteLine("1. Crear otra factura");
-                            Console.WriteLine("2. Volver al menu principal");
-                            Console.Write("Opción: ");
                             int opcion2 = Convert.ToInt32(Console.ReadLine());
 
-                            switch (opcion2)
+                            if (opcion2 == 1 || opcion2 == 2)
                             {
-                                case 1:
+                                switch (opcion2)
+                                {
+                                    case 1:
 
-                                    fact = true;
-                                    break;
+                                        fact = true;
+                                        break;
 
-                                case 2:
+                                    case 2:
 
-                                    fact = false;
-                                    break;
+                                        fact = false;
+                                        break;
+                                }
+                                break;
 
+                            }else
+                            {
+                                Console.WriteLine("Ingrese una opcion valida");
+                                Console.ReadKey();
                             }
-                            break;
                         }
                         catch (Exception)
                         {
